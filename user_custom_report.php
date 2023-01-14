@@ -18,7 +18,7 @@
  * Version information
  *
  * @package    local_user_custom_report
- * @author     Miguel Magdalena  
+ * @author     Miguel Magdalena
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -35,18 +35,11 @@ $PAGE->set_url($plugin_url);
 $PAGE->set_title(get_string('pluginname','local_user_custom_report'));
 $PAGE->set_heading(get_string('tablename','local_user_custom_report'));
 
-//Nav menu in the page
-$link = navigation_node::create(get_string('pluginname', 'local_user_custom_report'), $plugin_url);
-$flat = new flat_navigation_node($link, 0);
-$flat->key = 'user_custom_report';
-$PAGE->flatnav->add($flat);
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
-
 //Navbar
 $PAGE->navbar->ignore_active();
 $PAGE->navbar->add(get_string('pluginname','local_user_custom_report'),$plugin_url);
 
-//Dowload parameters for table
+//Download parameters for table
 $download = optional_param('download', '', PARAM_ALPHA);
 $table = new table_sql('uniqueid');
 date_default_timezone_set('America/Argentina/Buenos_Aires');
