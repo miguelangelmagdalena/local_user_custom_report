@@ -25,5 +25,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_user_custom_report'; // Full name of the plugin (used for diagnostics).
-$plugin->version  = 2021051700;    // The current module version (Date: YYYYMMDDXX).
-$plugin->requires = 2021051711;    // Requires this Moodle version.
+$plugin->version  = 2022011400;    // The current module version (Date: YYYYMMDDXX).
+$plugin->requires = 2020061518;    // Requires this Moodle version.
